@@ -6,7 +6,12 @@ namespace Excercise1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("input Name : ");
+            String name = Console.ReadLine();
+            Console.Write("Output Name : ");
+            Console.Write(name);
+
+            Console.ReadKey();
         }
     }
 }
