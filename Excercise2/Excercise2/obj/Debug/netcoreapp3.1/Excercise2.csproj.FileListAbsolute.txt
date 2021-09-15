@@ -1,0 +1,14 @@
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.csproj.AssemblyReference.cache
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.AssemblyInfoInputs.cache
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.AssemblyInfo.cs
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.csproj.CoreCompileInputs.cache
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.exe
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.deps.json
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.runtimeconfig.json
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.runtimeconfig.dev.json
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.dll
+D:\GitHub\Excercise2\Excercise2\bin\Debug\netcoreapp3.1\Excercise2.pdb
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.dll
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.pdb
+D:\GitHub\Excercise2\Excercise2\obj\Debug\netcoreapp3.1\Excercise2.genruntimeconfig.cache
