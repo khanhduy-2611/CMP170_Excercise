@@ -1,0 +1,53 @@
+﻿<Window x:Class="Practice03.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice03"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                <ColumnDefinition Width="0.01*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0">Student ID</TextBlock>
+            <TextBlock Grid.Row="1">First Name</TextBlock>
+            <TextBlock Grid.Row="2">Last Name</TextBlock>
+            <TextBlock Grid.Row="3">Gender</TextBlock>
+            <TextBlock Grid.Row="4">Class</TextBlock>
+            <TextBlock Grid.Row="5">Email</TextBlock>
+
+            <TextBox Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Text="{Binding Path=StudentIddetail}"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Text="{Binding Path=Firstnamedetail}"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Text="{Binding Path=Lastnamedetail}"></TextBox>
+            <RadioButton GroupName="Gender" Grid.Row="3" Grid.Column="3" IsChecked="{Binding Ismale}">Male</RadioButton >
+            <RadioButton GroupName="Gender" Grid.Row="3" Grid.Column="4" IsChecked="{Binding IsFemale}">FeMale</RadioButton>
+            <ComboBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="{Binding Classdetail}">
+                <ComboBoxItem IsSelected="True" Content="{Binding Path=Class}"></ComboBoxItem>
+                <ComboBoxItem>19DTHQA1</ComboBoxItem>
+                <ComboBoxItem>19DTHQA2</ComboBoxItem>
+                <ComboBoxItem>19DTHQA3</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Text="{Binding Path=Emaildetail}"></TextBox>
+            <Button Grid.Column="1" Grid.Row="6">Save</Button>
+            <Button Grid.Column="3" Grid.Row="6">Cancel</Button>
+        </Grid>
+
+    </StackPanel>
+</Window>

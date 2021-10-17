@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Student Search" Height="450" Width="800">
     <Window.DataContext>
-        <local:SearchStudentViewModel></local:SearchStudentViewModel>
+        <local:SearchStudentViewModel/>
     </Window.DataContext>
+    
     <Window.Resources>
         <DataTemplate x:Key="myTaskTemplate">
             <Border Name="border" BorderBrush="Aqua" BorderThickness="1"
@@ -93,17 +94,18 @@
                         <Button Grid.Column="3" Content="Reset" Style="{StaticResource StyleButton}"></Button>
 
                     </Grid>
-                    <ListBox MaxHeight="280" HorizontalContentAlignment="Stretch" BorderThickness="3" ItemsSource="{Binding Students}" SelectedItem="{Binding Selectedstudent}" ItemTemplate="{StaticResource myTaskTemplate}" >
+                    <ListBox MaxHeight="280" HorizontalContentAlignment="Stretch" BorderThickness="3" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}" ItemTemplate="{StaticResource myTaskTemplate}" >
 
                     </ListBox>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="57*"></ColumnDefinition>
+                            <ColumnDefinition Width="139*"/>
+                            <ColumnDefinition Width="196*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <Button Grid.Column="1" Content="Open Student Detail" Style="{StaticResource StyleButton}" Command="{Binding OpenDetailCommand}"></Button>
+                        <Button Grid.Column="2" Content="Open Student Detail" Style="{StaticResource StyleButton}" Command="{Binding OpenDetailCommand}" Margin="5,5,5,5"></Button>
 
                     </Grid>
 
