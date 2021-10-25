@@ -9,10 +9,51 @@
     <Window.DataContext>
         <local:SearchStudentViewModel/>
     </Window.DataContext>
-    
+
     <Window.Resources>
+        <Style x:Key="styleTextBox" TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="Grid.ColumnSpan" Value="4"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="FontSize" Value="15"/>
+
+        </Style>
+
+        <Style x:Key="LableContent" TargetType="Label">
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
+
+        <Style x:Key="StyleComboBox" TargetType="ComboBox">
+            <Setter Property="Grid.Column" Value="4"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="StyleButton" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+
+        </Style>
+
+        <Style x:Key="StyleLisBox" TargetType="ListBox">
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
         <DataTemplate x:Key="myTaskTemplate">
-            <Border Name="border" BorderBrush="Aqua" BorderThickness="1"
+            <Border Name="border" BorderBrush="LightBlue" BorderThickness="1"
           Padding="5" Margin="5">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -26,97 +67,72 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Text="StudentId:"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=studentId}" />
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Firstname:"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="FirstName:"/>
                     <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=firstname}"/>
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Lastname:"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="LastName:"/>
                     <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=lastname}"/>
                 </Grid>
             </Border>
         </DataTemplate>
 
-        <Style x:Key="StyleTextbox" TargetType="TextBox">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Height" Value="22"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="FontFamily" Value="TimeNewRoman"/>
-            <Setter Property="FontSize" Value="25"/>
-        </Style>
-
-        <Style x:Key="LabelContent" TargetType="Label">
-            <Setter Property="FontFamily" Value="TimeNewRoman"/>
-            <Setter Property="FontSize" Value="25"/>
-        </Style>
-
-        <Style x:Key="StyleButton" TargetType="Button">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="FontFamily" Value="TimeNewRoman"/>
-            <!--<Setter Property="VerticalAlignment" Value="Center"/>-->
-        </Style>
-
-        <Style x:Key="StyleCombobox" TargetType="ComboBox">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="FontFamily" Value="TimeNewRoman"/>
-            <Setter Property="FontSize" Value="15"/>
-        </Style>
     </Window.Resources>
-    <StackPanel>
-        <TabControl Margin="5">
-            <TabItem Header="Student">
-                <StackPanel>
-                    <Label Content="Search Student"></Label>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+        </Grid.RowDefinitions>
+        <Menu Margin="5" Grid.Row ="0">
+            <MenuItem Header="Student"></MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Search Students"></Label>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox Style="{StaticResource styleTextBox}" Text="{Binding Path=SearchKeyword}"></TextBox>
+                <ComboBox Style="{StaticResource StyleComboBox}" SelectedValue="{Binding Path=SelectedClass}" SelectedValuePath="Content">
+                    <ComboBoxItem>19DTHQA1</ComboBoxItem>
+                    <ComboBoxItem>19DTHQA2</ComboBoxItem>
+                    <ComboBoxItem>19DTHQA3</ComboBoxItem>
+                </ComboBox>
 
-                        </Grid.RowDefinitions>
+                <Button Grid.Column="6" Background="LightGray" Style="{StaticResource StyleButton}" Command="{Binding SearchCommand}">Search</Button>
+                <Button Grid.Column="7" Background="LightGray" Style="{StaticResource StyleButton}" Command="{Binding ResetCommand}">Reset</Button>
+            </Grid>
 
-                        <TextBox Style="{StaticResource StyleTextbox}"></TextBox>
+            <ListBox Grid.Row="2" HorizontalContentAlignment="Stretch" BorderThickness="3" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}" ItemTemplate="{StaticResource myTaskTemplate}">
+            </ListBox>
 
-                        <ComboBox Grid.Column="1" Style="{StaticResource StyleCombobox}">
-                            <ComboBoxItem IsSelected="True">19DTHQA1</ComboBoxItem>
-                            <ComboBoxItem>19DTHQA2</ComboBoxItem>
-                            <ComboBoxItem>19DTHQA3</ComboBoxItem>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.5*" ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="3" Background="Aqua" Grid.Column="6" Grid.ColumnSpan="3" Style="{StaticResource StyleButton}" Command="{Binding OpenDetailCommand}">Open Student Detail</Button>
+            </Grid>
 
-                        </ComboBox>
-
-                        <Button Grid.Column="2" Content="Search" Style="{StaticResource StyleButton}"></Button>
-                        <Button Grid.Column="3" Content="Reset" Style="{StaticResource StyleButton}"></Button>
-
-                    </Grid>
-                    <ListBox MaxHeight="280" HorizontalContentAlignment="Stretch" BorderThickness="3" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}" ItemTemplate="{StaticResource myTaskTemplate}" >
-
-                    </ListBox>
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="57*"></ColumnDefinition>
-                            <ColumnDefinition Width="139*"/>
-                            <ColumnDefinition Width="196*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="2" Content="Open Student Detail" Style="{StaticResource StyleButton}" Command="{Binding OpenDetailCommand}" Margin="5,5,5,5"></Button>
-
-                    </Grid>
-
-                </StackPanel>
-            </TabItem>
-
-            <TabItem Header="Class">
-
-            </TabItem>
-        </TabControl>
-
-    </StackPanel>
+        </Grid>
+    </Grid>
 </Window>
 

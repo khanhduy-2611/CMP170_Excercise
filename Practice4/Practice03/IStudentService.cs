@@ -9,13 +9,9 @@ namespace Practice03
 {
     interface IStudentService
     {
-        IList<Student> SearchStudent(String keyword, string hutechClass);
-
+        IList<Student> SearchStudent(string keyword, string hutechClass);
         Student LoadStudentById(long id);
-
         void UpdateOrCreateStudent(Student student);
-
         void DeleteStudentById(int id);
-        object SearchStudent(object searchKeyword, string selectedClass);
     }
 }
