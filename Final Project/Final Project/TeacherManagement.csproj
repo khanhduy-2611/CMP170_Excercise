@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Final_Project</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="26719-7-restart-hd-thumb.png" />
+    <None Remove="class-file-format-symbol.png" />
+    <None Remove="Education_%2846%29.jpg" />
+    <None Remove="FeMale.png" />
+    <None Remove="icon-name-29.jpg" />
+    <None Remove="kisspng-reboot-reset-ico-icon-restart-png-hd-5a758909b79b42.7514724115176522337521.png" />
+    <None Remove="Lovepik_com-828784782-Succulent cactus meb hand drawn vector cute green icon element.png" />
+    <None Remove="Male.png" />
+    <None Remove="noun_Private Room_122295.png" />
+    <None Remove="save.png" />
+    <None Remove="teacher.png" />
+    <None Remove="—Pngtree—cancel vector icon_4237160.png" />
+    <None Remove="—Pngtree—meaty meb hand drawn cute_4087069.png" />
+    <None Remove="—Pngtree—teacher vector illustration with black_5261925.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="class-file-format-symbol.png" />
+    <Resource Include="Education_(46).jpg" />
+    <Resource Include="FeMale.png" />
+    <Resource Include="icon-name-29.jpg" />
+    <Resource Include="Lovepik_com-828784782-Succulent cactus meb hand drawn vector cute green icon element.png" />
+    <Resource Include="Male.png" />
+    <Resource Include="noun_Private Room_122295.png" />
+    <Resource Include="save.png" />
+    <Resource Include="—Pngtree—cancel vector icon_4237160.png" />
+    <Resource Include="—Pngtree—meaty meb hand drawn cute_4087069.png" />
+    <Resource Include="—Pngtree—teacher vector illustration with black_5261925.png" />
+  </ItemGroup>
+
+</Project>
